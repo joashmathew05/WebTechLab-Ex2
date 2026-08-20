@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In & Sign Up Page</title>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+
+        body{
+            background-color: #f4f4f4;
+        }
+
+
+        header{
+            background-color: brown;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        header img{
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+
+        nav{
+            background-color: gray;
+        }
+
+
+        nav ul{
+            list-style: none;
+            display: flex;
+        }
+
+
+        nav ul li{
+            position: relative;
+        }
+
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px 40px;
+        }
+
+
+        nav ul li:hover{
+            background-color: darkred;
+        }
+
+
+        .dropdown{
+            display: none;
+            position: absolute;
+            background-color: green;
+            width: 170px;
+        }
+
+
+        .dropdown li{
+            width: 100%;
+        }
+
+
+        .dropdown li a{
+            padding: 12px;
+        }
+
+
+        nav ul li:hover .dropdown{
+            display: block;
+        }
+
+
+        .container{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 50px;
+            background-color: bisque;
+        }
+
+
+        .box{
+            background-color: white;
+            width: 320px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px gray;
+        }
+
+
+        .box h2{
+            text-align: center;
+            color: brown;
+            margin-bottom: 20px;
+        }
+
+
+        label{
+            font-weight: bold;
+        }
+
+
+        input[type=text],
+        input[type=email],
+        input[type=password]{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+
+        input[type=submit]{
+            width: 100%;
+            padding: 10px;
+            background-color: brown;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        input[type=submit]:hover{
+            background-color: darkred;
+        }
+
+
+        footer{
+            background-color: brown;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/619/619034.png" alt="Logo" width="300" height="90" >
+        <h1>JM Interior Design Studio</h1>
+    </header>
+
+
+    <nav>
+
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#">Projects</a>
+                <ul class="dropdown">
+                    <li><a href="#">Living Room</a></li>
+                    <li><a href="#">Bedroom</a></li>
+                    <li><a href="#">Kitchen</a></li>
+                    <li><a href="#">Office</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+
+    </nav>
+    <section class="container">
+        <div class="box">
+            <h2>Sign In</h2>
+            <form>
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username">
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password">
+                <input type="submit" value="Sign In">
+            </form>
+        </div>
+
+
+        <div class="box">
+            <h2>Sign Up</h2>
+            <form>
+                <label>Name</label>
+                <input type="text" placeholder="Enter Name">
+                <label>Email</label>
+                <input type="email" placeholder="Enter Email">
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password">
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>Karunya Institute of Technology and Sciences</p>
+        <p>© 2026 URK24CS1102 - Web Technology Lab</p>
+    </footer>
+</body>
+</html>
